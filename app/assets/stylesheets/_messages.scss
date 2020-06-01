@@ -1,0 +1,88 @@
+.messages{
+  width: 100%;
+  height: 800px;
+
+  &__title{
+    margin: 150px 100px 70px 50px;
+    font-size: 70px;
+    color: #808080;
+  }
+
+  &__main{
+    margin: 0 auto;
+    display: flex;
+
+    &__left{
+      letter-spacing: 0.2em;
+      margin-left: 15%;
+      width: 20%;
+      &__title{
+        margin: 30px 0 40px 0;
+        color: #808080;
+        font-size: 25px;
+      
+        &__city{
+          font-size: 20px;
+          margin-top: 30px;
+          &__area{
+            border: 1px solid #808080;
+            letter-spacing: 0.2em;
+            border-radius: 18px;
+            padding: 10px 30px;
+            margin-top: 20px;
+            a{
+              color: #808080;
+            }
+          }
+        }
+      }
+    }
+    &__right{
+      width: 40%;
+      margin-right:20%;
+      margin-left: 8%;
+
+      &__type{
+        margin: 40px 0 10px 20px;
+        h1{
+          font-size: 25px;
+          color: #808080;
+        }
+      }
+    
+      &__requests{
+        color: #404040;
+
+        &__post{
+          width: 100%;
+          bottom: 0px;
+          margin: 25px 10px;
+          border: 1px solid #808080;
+          border-radius: 18px;
+          box-shadow: 10px 10px rgba(0,0,0,0.2);
+
+          &__title{
+            border: 1px solid #808080;
+            border-radius: 18px;
+            font-size: 20px;
+            padding: 15px;
+            font-weight: 800;
+          }
+        }
+        &__contents{
+          font-size: 20px;
+
+          &__day{
+            padding: 20px;
+          }
+          &__time{
+            padding: 15px;
+          }
+          &__user-name{
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
