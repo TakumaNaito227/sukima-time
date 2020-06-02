@@ -35,8 +35,9 @@
 |name|string|null: false|
 |title|string|null: false|
 |city|string|null: false|
-|date|date|null: false|
-|time|time|null: false|
+|day|date|null: false|
+|start|time|null: false|
+|end|time|null: false|
 |text|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
