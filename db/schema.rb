@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_142653) do
+ActiveRecord::Schema.define(version: 2020_06_02_094458) do
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "title", null: false
     t.string "city", null: false
-    t.date "date", null: false
-    t.time "time", null: false
-    t.text "text", null: false
+    t.date "day", null: false
+    t.time "start", null: false
+    t.time "end", null: false
+    t.string "text", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
