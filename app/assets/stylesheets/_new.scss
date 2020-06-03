@@ -1,8 +1,13 @@
+$form-font-size: 18px;
+$form-padding: 5px;
+$main-padding: 40px 0 ;
+$main-padding-bottom: 40px;
+$main-border-bottom: 1px solid grey;
+
 .content{
   margin-top: 140px;
 
   &__main{
-    background-color: #ffffff;
     width: 700px;
     margin: 40px auto;
     padding: 24px 40px 40px;
@@ -23,6 +28,13 @@
         background-color: #ff3333;
         margin-left: 1em;
         padding: 2px 6px 2px 4px;
+      }
+      &__field{
+        width: 100%;
+        font-size: $form-font-size;
+        line-height: 40px;
+        margin-bottom: 20px;
+        padding: $form-padding;
       }
     }
   }

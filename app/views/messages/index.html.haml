@@ -41,42 +41,35 @@
           All
       .messages__main__right__requests
         .messages__main__right__requests__post
-          .messages__main__right__requests__post__title
-            仕事探してます！
-          .messages__main__right__requests__contents
-            .messages__main__right__requests__contents__day
-              5月10日
-            .messages__main__right__requests__contents__time
-              10:00〜14:00
-            .messages__main__right__requests__contents__city
-              渋谷
-        .messages__main__right__requests__post
-          .messages__main__right__requests__post__title
-            空いてます！
-          .messages__main__right__requests__contents
-            .messages__main__right__requests__contents__day
-              5月10日
-            .messages__main__right__requests__contents__time
-              10:00〜14:00
-            .messages__main__right__requests__contents__city
-              東京
-        .messages__main__right__requests__post
-          .messages__main__right__requests__post__title
-            仕事探してます！
-          .messages__main__right__requests__contents
-            .messages__main__right__requests__contents__day
-              5月10日
-            .messages__main__right__requests__contents__time
-              10:00〜14:00
-            .messages__main__right__requests__contents__city
-              日本橋
-        .messages__main__right__requests__post
-          .messages__main__right__requests__post__title
-            仕事探してます！
-          .messages__main__right__requests__contents
-            .messages__main__right__requests__contents__day
-              5月10日
-            .messages__main__right__requests__contents__time
-              10:00〜14:00
-            .messages__main__right__requests__contents__city
-              横浜
+          -@messages.each do |message|
+            .messages__main__right__requests__post__title
+              = message.title
+            .messages__main__right__requests__contents
+              .messages__main__right__requests__contents__day
+                日付：
+                = message.day.strftime("%Y年%m月%d日")
+              .messages__main__right__requests__contents__time
+                .messages__main__right__requests__contents__time__start
+                  時間：
+                  = message.start.strftime('%H:%M')
+                .messages__main__right__requests__contents__time__end
+                  = message.end.strftime('%H:%M')
+              .messages__main__right__requests__contents__city
+                場所：渋谷
+                -# = message.city
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -70,12 +70,20 @@
         }
         &__contents{
           font-size: 20px;
+          line-height: 20px;
 
           &__day{
             padding: 20px;
           }
           &__time{
-            padding: 15px;
+            padding: 20px;
+            display: flex;
+
+            &__start{
+              margin-right: 30px;
+            }
+            &__end{
+            }
           }
           &__city{
             padding: 20px;

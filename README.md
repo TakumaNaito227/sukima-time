@@ -34,15 +34,16 @@
 |------|----|-------|
 |name|string|null: false|
 |title|string|null: false|
-|city|string|null: false|
 |day|date|null: false|
 |start|time|null: false|
 |end|time|null: false|
+|money|integer|null: false|
 |text|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
-
+|city_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :users  
+- belongs_to :users
+- belongs_to :cities
 
 ## usersテーブル
 |Column|Type|Options|
@@ -53,8 +54,8 @@
 |mail|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :images  
-- has_many :messages  
+- has_many :images
+- has_many :messages
 
 ## imagesテーブル
 |Column|Type|Options|
@@ -64,4 +65,10 @@
 ### Association
 - belongs_to :user
 
-
+## citiesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|cities|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- has_many :messages
