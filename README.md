@@ -34,7 +34,9 @@
 |------|----|-------|
 |name|string|null: false|
 |title|string|null: false|
-|day|date|null: false|
+|year|integer|null: false|
+|month|integer|null: false|
+|day|integer|null: false|
 |start|time|null: false|
 |end|time|null: false|
 |money|integer|null: false|

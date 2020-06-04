@@ -5,10 +5,19 @@ class MessagesController < ApplicationController
   end
 
   def new
-    @messages = Message.new
+    @message = Message.new
+  end
+
+  def create
+    Message.create(messages_params)
   end
 
   def show
   end
+
+  private
+def messages_params
+  params.require(:message).permit(:name, :image, :text)
+end
 
 end
