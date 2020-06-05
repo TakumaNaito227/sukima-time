@@ -5,19 +5,17 @@ class MessagesController < ApplicationController
   end
 
   def new
-    @message = Message.new
+    @messages = Message.new
   end
 
   def create
-    Message.create(messages_params)
-  end
-
-  def show
+    Message.create(message_params)
+    redirect_to root_path
   end
 
   private
-def messages_params
-  params.require(:message).permit(:name, :image, :text)
-end
+  def message_params
+    params.require(:message).permit(:nickname, :title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id)
+  end
 
 end

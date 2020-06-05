@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "home#top" 
 
-  resources :messages, only: [:index, :new, :create, :show] 
+  resources :messages, only: [:index, :new, :create] 
   
 end
