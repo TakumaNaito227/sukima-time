@@ -8,7 +8,14 @@ class MessagesController < ApplicationController
     @messages = Message.new
   end
 
-  def show
+  def create
+    Message.create(message_params)
+    redirect_to root_path
+  end
+
+  private
+  def message_params
+    params.require(:message).permit(:nickname, :title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id)
   end
 
 end

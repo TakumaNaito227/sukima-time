@@ -36,6 +36,10 @@ $main-border-bottom: 1px solid grey;
         margin-bottom: 20px;
         padding: $form-padding;
       }
+      .flexbox{
+        display: flex;
+        align-items: center
+      }
     }
   }
 }

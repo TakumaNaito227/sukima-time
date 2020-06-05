@@ -32,9 +32,11 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|nickname|string|null: false|
 |title|string|null: false|
-|day|date|null: false|
+|year|integer|null: false|
+|month|integer|null: false|
+|day|integer|null: false|
 |start|time|null: false|
 |end|time|null: false|
 |money|integer|null: false|
@@ -64,11 +66,3 @@
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-
-## citiesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|cities|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- has_many :messages
