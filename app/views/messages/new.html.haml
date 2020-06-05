@@ -49,8 +49,8 @@
           %span.required
             必須
           - money = ["--"]
-          - for num in 50..300
-            - money << 10*num
+          - for num in 5..30
+            - money << 100*num
           = f.select :money, money, {}, class: "content__main__box__field"
         .text-bold
           都市
