@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create(message_params)
+    @message = Message.new(message_params)
     redirect_to root_path
   end
 
