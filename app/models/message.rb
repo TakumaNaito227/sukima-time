@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :cities
+  belongs_to_active_hash :city
 
   belongs_to :user
 
