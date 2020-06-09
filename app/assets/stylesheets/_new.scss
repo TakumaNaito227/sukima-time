@@ -13,6 +13,7 @@ $main-border-bottom: 1px solid grey;
     padding: 24px 40px 40px;
     color: #333;
     &__box{
+      width: 100%;
       padding-bottom: 40px;
       border-bottom:  1px solid grey;
     
@@ -30,16 +31,46 @@ $main-border-bottom: 1px solid grey;
         padding: 2px 6px 2px 4px;
       }
       &__field{
+        height: 40px;
         width: 100%;
         font-size: $form-font-size;
         line-height: 40px;
         margin-bottom: 20px;
         padding: $form-padding;
+        border-radius: 18px;
+        border: 1px solid #808080;
+
+        &__select{
+          height: 40px;
+          width: auto;
+          font-size: $form-font-size;
+          line-height: 40px;
+          margin-bottom: 20px;
+          padding: $form-padding;
+        }
+        &__ok{
+          margin-top: 40px;
+          height: 60px;
+          width: 300px;
+          font-size: 23px;
+          line-height: 60px;
+          margin-bottom: 20px;
+          padding: $form-padding;
+          border-radius: 18px;
+          border: 1px solid #808080;
+          animation: center;
+          }
       }
       .flexbox{
         display: flex;
-        align-items: center
+        align-items: center;
+        font-size: $form-font-size;
+        letter-spacing: 10px;
       }
     }
+      &__botton-box{
+        text-align: center;
+
+      }
   }
 }

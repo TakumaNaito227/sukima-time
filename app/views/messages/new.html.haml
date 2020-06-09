@@ -18,50 +18,52 @@
           日付
           %span.required
             必須
-          .flexbox
+        .flexbox
           - year = ["--"]
           - for num in 0..1
             - year << 2020+num
-          = f.select :year, year, {}, class: "content__main__box__field"
+          = f.select :year, year, {}, class: "content__main__box__field__select"
           年
           - month = ["--"]
           - for num in 1..12
             - month << num
-          = f.select :month, month, {}, class: "content__main__box__field"
+          = f.select :month, month, {}, class: "content__main__box__field__select"
           月
           - day = ["--"]
           - for num in 1..31
             - day << num
-          = f.select :day, day, {}, class: "content__main__box__field"
+          = f.select :day, day, {}, class: "content__main__box__field__select"
           日
         .text-bold
           勤務開始可能時間
           %span.required
             必須
-        = f.time_select :start, {}, class: 'content__main__box__field'
+        .flexbox
+          = f.time_select :start, {}, class: 'content__main__box__field__select'
         .text-bold
           勤務終了希望時間
           %span.required
             必須
-        = f.time_select :end, {}, class: 'content__main__box__field'
+        .flexbox
+          = f.time_select :end, {}, class: 'content__main__box__field__select'
         .text-bold
           時給
           %span.required
             必須
-          - money = ["--"]
-          - for num in 5..30
-            - money << 100*num
-          = f.select :money, money, {}, class: "content__main__box__field"
+        - money = ["--"]
+        - for num in 5..30
+          - money << 100*num
+        = f.select :money, money, {}, class: "content__main__box__field__select"
         .text-bold
           都市
           %span.required
             必須
-        = f.collection_select :city_id, Cities.all, :id, :name, {prompt: "選択してください"}, class: "content__main__box__field"
+        = f.collection_select :city_id, City.all, :id, :name, {prompt: "選択してください"}, class: "content__main__box__field__select"
         .text-bold
           テキスト
         = f.text_field :text, class:"content__main__box__field", placeholder: "40文字まで", maxlength: 40
       .content__main__botton-box
-        = f.submit "決定", class: "content__main__box__field"
+        = f.submit "決定", class: "content__main__box__field__ok"
         .content__main__botton-box__draft-botton
           = link_to root_path, id: "back-btn" do
             もどる
