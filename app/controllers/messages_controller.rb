@@ -15,6 +15,11 @@ class MessagesController < ApplicationController
     redirect_to messages_path
   end
 
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
+  end
+
   private
   def message_params
     params.require(:message).permit(:nickname, :title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id).merge(user_id: current_user.id)
