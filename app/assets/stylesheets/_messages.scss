@@ -2,7 +2,7 @@
   width: 100%;
 
   &__title{
-    margin: 150px 100px 70px 50px;
+    margin: 150px 100px 70px 100px;
     font-size: 70px;
     color: #808080;
   }
@@ -50,7 +50,7 @@
       }
     
       &__requests{
-        color: #404040;
+        color: #808080;
 
         &__post{
           width: 100%;
@@ -66,13 +66,17 @@
             font-size: 20px;
             padding: 15px;
             font-weight: 800;
+            a{
+              color: black;
+              text-decoration: none;
+            }
           }
         }
         &__contents{
           font-size: 20px;
           line-height: 20px;
 
-          &__day{
+          &__day,&__city,&__money{
             padding: 20px;
           }
           &__time{
@@ -82,11 +86,6 @@
             &__start{
               margin-right: 3px;
             }
-            &__end{
-            }
-          }
-          &__city{
-            padding: 20px;
           }
         }
       }

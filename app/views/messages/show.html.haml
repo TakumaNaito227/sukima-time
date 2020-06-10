@@ -1,2 +1,38 @@
 = render "home/header"
-
+.messages
+  .messages__title
+    The Details
+.main
+  .main__right
+    .main__right__requests
+      .main__right__requests__post
+        .main__right__requests__post__title
+          = @message.title
+        .main__right__requests__contents
+          .main__right__requests__contents__day
+            日付：
+            = @message.year
+            年
+            = @message.month
+            月
+            = @message.day
+            日
+          .main__right__requests__contents__time
+            .main__right__requests__contents__time__start
+              時間：
+              = @message.start.strftime('%H:%M')
+              〜
+            .main__right__requests__contents__time__end
+              = @message.end.strftime('%H:%M')
+          .main__right__requests__contents__city
+            場所：
+            = @message.city.name
+          .main__right__requests__contents__money
+            時給：
+            = @message.money
+            円
+          .main__right__requests__contents__text
+            = @message.text
+.under
+  =link_to messages_path do
+    Back
