@@ -12,6 +12,17 @@ class MessagesController < ApplicationController
 
   def create
     Message.create(message_params)
+    redirect_to messages_path
+  end
+
+  def show
+    @message = Message.find(params[:id])
+  end
+
+
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
   end
 
   private
