@@ -1,20 +1,28 @@
 .header
-  .header__inner
-    %h1.header__inner__title
-      =link_to root_path do
-        Sukima-Time
-    .header__inner__right
-      .header__inner__right__link
-        =link_to "#" do
-          About Us
-      -if user_signed_in?
+  -if user_signed_in?
+    .header__inner
+      %h1.header__inner__title
+        =link_to messages_path do
+          Sukima-Time
+      .header__inner__right
+        .header__inner__right__link
+          =link_to "#" do
+            About Us
         .header__inner__right__link
           =link_to destroy_user_session_path, method: :delete do
             Log out
         .header__inner__right__link
           =link_to new_message_path do
             Request
-      -else
+  -else
+    .header__inner
+      %h1.header__inner__title
+        =link_to root_path do
+          Sukima-Time
+      .header__inner__right
+        .header__inner__right__link
+          =link_to "#" do
+            About Us
         .header__inner__right__link
           =link_to new_user_session_path do
             Log in

@@ -11,9 +11,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
-    binding.pry
-    redirect_to root_path
+    Message.create(message_params)
   end
 
   private
