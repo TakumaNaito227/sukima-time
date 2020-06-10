@@ -19,7 +19,6 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
   end
 
-
   def destroy
     message = Message.find(params[:id])
     message.destroy
