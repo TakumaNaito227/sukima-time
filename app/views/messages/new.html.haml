@@ -39,13 +39,13 @@
           %span.required
             必須
         .flexbox
-          = f.time_select :start, {}, class: 'content__main__box__field__select'
+          = f.time_select :start, { :include_blank => true, :minute_step => 30}, class: 'content__main__box__field__select'
         .text-bold
           勤務終了希望時間
           %span.required
             必須
         .flexbox
-          = f.time_select :end, {}, class: 'content__main__box__field__select'
+          = f.time_select :end, {:include_blank => true, :minute_step => 30}, class: 'content__main__box__field__select'
         .text-bold
           時給
           %span.required
