@@ -31,6 +31,12 @@ class MessagesController < ApplicationController
   def update
     message = Message.find(params[:id])
     message.update(message_params)
+    if message.save
+      redirect_to messages_path, notice: 'メッセージが更新されました'
+    else
+      flash.now[:alert] = '更新に失敗しました'
+      render :index
+    end
   end
 
   private
