@@ -4,5 +4,5 @@ class Message < ApplicationRecord
 
   belongs_to :user
 
-  validates :nickname, :title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id, presence: true
+  validates :title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id, presence: true
 end

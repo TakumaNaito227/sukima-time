@@ -5,11 +5,6 @@
     = form_with model: @message do |f|
       .content__main__box
         .text-bold
-          ニックネーム
-          %span.required
-            必須
-        = f.text_field :nickname, class:"content__main__box__field", placeholder: "40文字まで", maxlength: 40
-        .text-bold
           タイトル
           %span.required
             必須

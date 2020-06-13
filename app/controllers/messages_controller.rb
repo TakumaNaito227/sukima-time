@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @messages = Message.all
+    @messages = Message.all.order('created_at DESC')
   end
 
   def new
@@ -41,7 +41,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:nickname, :title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id).merge(user_id: current_user.id)
+    params.require(:message).permit(:title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id).merge(user_id: current_user.id)
   end
 
   def move_to_index
