@@ -1,10 +1,7 @@
 = render "home/header"
-
 .messages
   .messages__title
-    .messages__title
-      Let's Request!
-
+    Let's Request!
   .messages__main
     .messages__main__left
       .messages__main__left__title
@@ -43,7 +40,8 @@
       -@messages.each do |message|
         .messages__main__right__requests__post
           .messages__main__right__requests__post__title
-            = message.title
+            = link_to message_path(message.id) do
+              = message.title
           .messages__main__right__requests__contents
             .messages__main__right__requests__contents__day
               日付：
