@@ -1,21 +1,25 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
+= render "home/header"
+.content__main
+  .content__main__box
+    %h2 Sign up
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .text-bold
+        ニックネーム
+      = f.text_field :nickname, class: "content__main__box__field", placeholder: "ニックネーム"
+      .text-bold
+        メールアドレス
+      = f.email_field :email, class: "content__main__box__field", placeholder: "PC・携帯どちらでも可"
+      .text-bold
+        パスワード
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+      = f.password_field :password, class: "content__main__box__field", placeholder: "6文字以上の半角英数字"
+      .text-bold
+        パスワード確認
+      = f.password_field :password_confirmation, class: "content__main__box__field", placeholder: "6文字以上の半角英数字"
+      .text-bold
+      = f.submit "Sign up", class: "content__main__box__field__sign-up"
 = render "devise/shared/links"
