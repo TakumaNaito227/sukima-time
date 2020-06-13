@@ -1,0 +1,61 @@
+.messages{
+  width: 100%;
+  &__title{
+    margin: 150px 100px 70px 100px;
+    font-size: 70px;
+    color: #808080;
+  }
+}
+.main{
+  height: 100%;
+  &__right{
+    width: 40%;
+    margin: 0 auto;
+    &__requests{
+      color: #808080;
+      &__post{
+        width: 100%;
+        bottom: 0px;
+        margin: 25px 10px;
+        border: 1px solid #808080;
+        border-radius: 18px;
+        box-shadow: 10px 10px rgba(0,0,0,0.2);
+        &__title{
+          border: 1px solid #808080;
+          border-radius: 18px;
+          font-size: 20px;
+          padding: 15px;
+          font-weight: 800;
+          a{
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+      &__contents{
+        font-size: 20px;
+        line-height: 20px;
+        &__day,&__city,&__money{
+          padding: 20px;
+        }
+        &__time{
+          padding: 20px;
+          display: flex;
+          &__start{
+            margin-right: 3px;
+          }
+        }
+        &__text{
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+.under{
+  text-align: center;
+  a{
+    color: #808080;
+    font-size: 20px;
+  }
+}

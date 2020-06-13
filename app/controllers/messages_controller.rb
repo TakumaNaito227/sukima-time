@@ -24,6 +24,21 @@ class MessagesController < ApplicationController
     message.destroy
   end
 
+  def edit
+    @message = Message.find(params[:id])
+  end
+
+  def update
+    message = Message.find(params[:id])
+    message.update(message_params)
+    if message.save
+      redirect_to messages_path, notice: 'メッセージが更新されました'
+    else
+      flash.now[:alert] = '更新に失敗しました'
+      render :index
+    end
+  end
+
   private
   def message_params
     params.require(:message).permit(:nickname, :title, :year, :month, :day, :start, :end, :money, :text, :user_id, :city_id).merge(user_id: current_user.id)
