@@ -22,6 +22,12 @@ class MessagesController < ApplicationController
   def destroy
     message = Message.find(params[:id])
     message.destroy
+    if message.destroy
+      redirect_to messages_path, notice: 'メッセージが削除されました'
+    else
+      flash.now[:alert] = '更新に失敗しました'
+      render :index
+    end
   end
 
   def edit
