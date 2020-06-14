@@ -6,7 +6,16 @@
       = render "devise/shared/error_messages", resource: resource
       .text-bold
         ニックネーム
-      = f.text_field :nickname, class: "content__main__box__field", placeholder: "ニックネーム"
+      = f.text_field :nickname, class: "content__main__box__field", placeholder: "10文字以内"
+      .text-bold
+        年齢
+        - age = ["--"]
+        - for num in 18..80
+          - age << num
+      = f.select :age, age, {}, class: "content__main__box__field__age", placeholder: "年齢"
+      .text-bold
+        プロフィール
+      = f.text_area :profile, class: "content__main__box__field__profile", placeholder: "255文字まで"
       .text-bold
         メールアドレス
       = f.email_field :email, class: "content__main__box__field", placeholder: "PC・携帯どちらでも可"

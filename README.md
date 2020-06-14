@@ -32,7 +32,6 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
 |title|string|null: false|
 |year|integer|null: false|
 |month|integer|null: false|
@@ -50,19 +49,12 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|firstname|string|null: false|
-|lastname|string|null: false|
-|age|string|null: false|
+|nickname|string|null: false|
 |mail|string|null: false|
 |password|string|null: false|
+|age|integer|null: false|
+|profile|string|null: false|
+|images|string|null: false|
 ### Association
-- has_many :images
 - has_many :messages
 
-## imagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|images|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
