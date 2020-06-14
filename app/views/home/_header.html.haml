@@ -6,8 +6,8 @@
           Sukima-Time
       .header__inner__right
         .header__inner__right__link
-          =link_to "#" do
-            About Us
+          =link_to user_path(current_user.id) do
+            My page
         .header__inner__right__link
           =link_to destroy_user_session_path, method: :delete do
             Log out
