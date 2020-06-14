@@ -53,9 +53,17 @@
   }
 }
 .under{
-  text-align: center;
-  a{
-    color: #808080;
-    font-size: 20px;
-  }
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  &__btn{
+    border: 1px solid #808080;
+    border-radius: 18px;
+    padding: 5px 10px;
+    a{
+      color: #808080;
+      font-size: 20px;
+    }
+  }  
 }
