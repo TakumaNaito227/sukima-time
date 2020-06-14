@@ -1,0 +1,36 @@
+= render "home/header"
+.messages
+  .messages__main
+    .messages__main__profile
+      .messages__main__profile__nickname
+        = @nickname
+        = @messages.count
+    .messages__main__right
+      .messages__main__right__requests
+      -@messages.each do |message|
+        .messages__main__right__requests__post
+          .messages__main__right__requests__post__title
+            = link_to message_path(message.id) do
+              = message.title
+          .messages__main__right__requests__contents
+            .messages__main__right__requests__contents__day
+              日付：
+              = message.year
+              年
+              = message.month
+              月
+              = message.day
+              日
+            .messages__main__right__requests__contents__time
+              .messages__main__right__requests__contents__time__start
+                時間：
+                = message.start.strftime('%H:%M')
+                〜
+              .messages__main__right__requests__contents__time__end
+                = message.end.strftime('%H:%M')
+            .messages__main__right__requests__contents__city
+              場所：
+              = message.city.name
+.back-btn
+  = link_to messages_path do
+    戻る
