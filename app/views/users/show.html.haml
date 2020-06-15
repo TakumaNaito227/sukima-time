@@ -4,7 +4,21 @@
     .messages__main__profile
       .messages__main__profile__nickname
         = @nickname
-        = @messages.count
+      .messages__main__profile__image
+      .messages__main__profile__details
+        .messages__main__profile__details__left
+          投稿数
+          %br
+          = @messages.count
+        .messages__main__profile__details__right
+          年齢
+          %br
+          = current_user.age
+      .messages__main__profile__text
+        = current_user.profile
+      .messages__main__profile__under-btn
+        = link_to "X" do
+          戻る
     .messages__main__right
       .messages__main__right__requests
       -@messages.each do |message|

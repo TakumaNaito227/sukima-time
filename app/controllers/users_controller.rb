@@ -4,5 +4,5 @@ class UsersController < ApplicationController
     @nickname = current_user.nickname
     @messages = current_user.messages
   end
-  
+
 end
