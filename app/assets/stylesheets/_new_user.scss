@@ -4,6 +4,43 @@ h2{
 }
 .mesasge{
   &__profile{
+    
+  }
+}
+.content__main__box__field{
+  
+  &__age{
+    height: 40px;
+    width: 25%;
+    font-size: $form-font-size;
+    line-height: 40px;
+    margin-bottom: 20px;
+    padding: $form-padding;
+    border-radius: 18px;
+    border: 1px solid #808080;
 
+  }
+  &__profile{
+    height: 200px;
+    width: 80%;
+    font-size: $form-font-size;
+    line-height: 40px;
+    margin-bottom: 20px;
+    padding: $form-padding;
+    border-radius: 18px;
+    border: 1px solid #808080;
+  }
+
+  &__sign-up{
+    margin-top: 20px;
+    height: 50px;
+    width: 150px;
+    font-size: 23px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding: $form-padding;
+    border-radius: 18px;
+    border: 1px solid #808080;
+    animation: center;
   }
 }
