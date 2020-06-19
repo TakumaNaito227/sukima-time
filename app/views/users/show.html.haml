@@ -16,9 +16,6 @@
           = current_user.age
       .messages__main__profile__text
         = current_user.profile
-      .messages__main__profile__under-btn
-        = link_to "X" do
-          編集
     .messages__main__right
       .messages__main__right__requests
       -@messages.each do |message|
@@ -45,6 +42,6 @@
             .messages__main__right__requests__contents__city
               場所：
               = message.city.name
-.back-btn
-  = link_to messages_path do
-    戻る
+      .btn
+        = link_to messages_path do
+          戻る
