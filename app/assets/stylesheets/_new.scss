@@ -25,9 +25,9 @@ $main-border-bottom: 1px solid #808080;
       .required{
         font-size: 13px;
         color: #ffffff;
-        background-color: #ff3333;
+        background-color: skyblue;
         margin-left: 1em;
-        padding: 2px 6px 2px 4px;
+        padding: 3px 8px 3px 8px;
       }
       &__field{
         height: 40px;
@@ -58,6 +58,8 @@ $main-border-bottom: 1px solid #808080;
           border-radius: 18px;
           border: 1px solid #808080;
           animation: center;
+          color: white;
+          background-color: skyblue;
         }
       }
       .flexbox{
