@@ -11,8 +11,13 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create(message_params)
-    redirect_to messages_path
+    @message = Message.create(message_params)
+    if @message.save
+      redirect_to messages_path, notice: '登録が完了しました'
+    else
+      @message.new
+      render :new
+    end
   end
 
   def show
@@ -21,7 +26,6 @@ class MessagesController < ApplicationController
 
   def destroy
     message = Message.find(params[:id])
-    message.destroy
     if message.destroy
       redirect_to messages_path, notice: 'メッセージが削除されました'
     else
@@ -29,6 +33,7 @@ class MessagesController < ApplicationController
       render :index
     end
   end
+
 
   def edit
     @message = Message.find(params[:id])
