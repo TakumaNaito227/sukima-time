@@ -1,2 +1,29 @@
-.city
-  = @messages
+.messages__main__right
+  .messages__main__right__type
+    %h1
+      すべての都市
+  .messages__main__right__requests
+  -@messages.each do |message|
+    .messages__main__right__requests__post
+      .messages__main__right__requests__post__title
+        = link_to message_path(message.id) do
+          = message.title
+      .messages__main__right__requests__contents
+        .messages__main__right__requests__contents__day
+          日付：
+          = message.year
+          年
+          = message.month
+          月
+          = message.day
+          日
+        .messages__main__right__requests__contents__time
+          .messages__main__right__requests__contents__time__start
+            時間：
+            = message.start.strftime('%H:%M')
+            〜
+          .messages__main__right__requests__contents__time__end
+            = message.end.strftime('%H:%M')
+        .messages__main__right__requests__contents__city
+          場所：
+          = message.city.name
