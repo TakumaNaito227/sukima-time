@@ -1,10 +1,9 @@
 class CitiesController < ApplicationController
 
   def show
-    @city = Message.find_by(city_id: params[:id])
-    @messages = @city.Message.all
+    @messages = Message.all.order('created_at DESC')
+    @city = @messages.find_by(city_id: params[:id])
     binding.pry
-    # @messages = Message.all.order('created_at DESC')
     # @tokyo = Message.where(city_id: 2)
     # @nihonbashi = Message.where(city_id: 3)
     # @ginza = Message.where(city_id: 4)
